@@ -36,7 +36,7 @@ export function useEscalaNotas() {
     try {
       const filas = generarTabla(parametros);
       setDatos(filas);
-    } catch (err) {
+    } catch {
       setError('Error al generar la tabla. Revisa los parámetros ingresados.');
       setDatos([]);
     }
