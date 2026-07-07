@@ -49,3 +49,8 @@ Se mantiene la estructura de carpetas propuesta en el documento original
 - Persistencia de parámetros en `localStorage`.
 - Modo oscuro.
 - Virtualización de la tabla para incrementos muy pequeños (>5000 filas).
+
+## Desarrollador
+
+Desarrollado por **Raul Rosales** - [www.artenlaclase.cl](https://www.artenlaclase.cl)
+

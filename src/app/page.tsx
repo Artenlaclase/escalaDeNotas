@@ -44,7 +44,7 @@ export default function HomePage() {
       </div>
 
       {datos.length > 0 && (
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="mt-8 flex flex-col gap-6">
           <TablaResultados
             datos={datos}
             visible={datos.length > 0}
