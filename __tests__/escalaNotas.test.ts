@@ -108,6 +108,11 @@ describe('validarParametros', () => {
   test('acepta parámetros válidos por defecto', () => {
     expect(validarParametros(base)).toBeNull();
   });
+
+  test('rechaza parámetros que sean NaN', () => {
+    const error = validarParametros({ ...base, pmax: NaN });
+    expect(error).toBe('Todos los parámetros deben ser valores numéricos válidos.');
+  });
 });
 
 describe('formatearUnDecimal', () => {

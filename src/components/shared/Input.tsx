@@ -18,11 +18,14 @@ export function Input({ id, label, value, onChange, step = 0.1, min, max }: Inpu
       <input
         id={id}
         type="number"
-        value={value}
+        value={isNaN(value) ? '' : value}
         step={step}
         min={min}
         max={max}
-        onChange={(e) => onChange(parseFloat(e.target.value))}
+        onChange={(e) => {
+          const val = parseFloat(e.target.value);
+          onChange(isNaN(val) ? NaN : val);
+        }}
         className="rounded-md border border-tinta/20 bg-papel px-3 py-2 text-tinta
                    focus:outline-none focus:ring-2 focus:ring-lapiz/60 focus:border-lapiz"
       />

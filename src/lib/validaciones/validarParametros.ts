@@ -4,6 +4,17 @@ import { ParametrosEscala } from '@/types/escala';
 export function validarParametros(params: ParametrosEscala): string | null {
   const { pmax, exigencia, nmin, napr, nmax, incremento } = params;
 
+  if (
+    isNaN(pmax) ||
+    isNaN(exigencia) ||
+    isNaN(nmin) ||
+    isNaN(napr) ||
+    isNaN(nmax) ||
+    isNaN(incremento)
+  ) {
+    return 'Todos los parámetros deben ser valores numéricos válidos.';
+  }
+
   if (pmax <= 0) return 'El puntaje máximo debe ser mayor a 0.';
 
   // exigencia = 100% se rechaza explícitamente: haría que el denominador
