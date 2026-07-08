@@ -54,6 +54,20 @@ export default function HomePage() {
           <ExplicacionCalculo fila={filaSeleccionada} />
         </div>
       )}
+      <footer className="mt-16 border-t border-tinta/10 pt-6 text-center text-sm text-tinta/50">
+        <p>
+          Página generada por el profesor{' '}
+          <span className="font-semibold text-tinta">Raúl Rosales</span>. Visita su sitio web en{' '}
+          <a
+            href="https://www.artenlaclase.cl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-lapiz hover:underline transition-colors"
+          >
+            www.artenlaclase.cl
+          </a>
+        </p>
+      </footer>
     </main>
   );
 }
